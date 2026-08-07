@@ -351,6 +351,9 @@ def validate_cross_chain_metadata(
 def get_svg_dimensions(svg_path: Path) -> tuple[int | None, int | None]:
     """Extract width and height from an SVG file.
 
+    Falls back to the viewBox attribute when width/height are absent, since
+    SVGs exported without explicit pixel dimensions are common and valid.
+
     Args:
         svg_path: Path to the SVG file.
 
@@ -369,6 +372,14 @@ def get_svg_dimensions(svg_path: Path) -> tuple[int | None, int | None]:
             width = int(re.sub(r"[^0-9.]", "", width_str).split(".")[0])
             height = int(re.sub(r"[^0-9.]", "", height_str).split(".")[0])
             return width, height
+
+        view_box = root.get("viewBox")
+        if view_box:
+            parts = view_box.replace(",", " ").split()
+            if len(parts) == 4:
+                width = int(float(parts[2]))
+                height = int(float(parts[3]))
+                return width, height
 
         return None, None
     except Exception:
