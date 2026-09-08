@@ -234,7 +234,7 @@ def validate_cross_chain_addresses(cross_chain: dict[str, Any]) -> list[str]:
         else:
             address = chain_data["address"]
             # For EVM chains, validate address format
-            if not is_valid_address(address):
+            if type(address) is not str or not is_valid_address(address):
                 errors.append(f"Invalid address in crossChainAddresses[{chain_id}]: {address}")
 
         # Validate optional symbol field type
@@ -533,7 +533,7 @@ def validate_token_data(
 
     # Validate address
     address = data.get("address")
-    if not is_valid_address(address):
+    if type(address) is not str or not is_valid_address(address):
         errors.append(f"Invalid address: {address}")
 
     # Validate name
