@@ -5,6 +5,7 @@
   "symbol": "deJTRSY",
   "decimals": 18,
   "extensions": {
+    "coinGeckoId": "jtrsy-derwa",
     "crossChainAddresses": {
       "1": {
         "address": "0xA6233014B9b7aaa74f38fa1977ffC7A89642dC72"
