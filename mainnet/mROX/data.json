@@ -3,5 +3,13 @@
   "address": "0x6CF55183eA297ba200Cf88419Bba156EBA2Ed206",
   "name": "Midas Rockaway Market Neutral",
   "symbol": "mROX",
-  "decimals": 18
+  "decimals": 18,
+  "extensions": {
+    "coinGeckoId": "midas-rockaway-market-neutral",
+    "crossChainAddresses": {
+      "1": {
+        "address": "0x67E1F506B148d0Fc95a4E3fFb49068ceB6855c05"
+      }
+    }
+  }
 }
