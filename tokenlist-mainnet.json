@@ -4,7 +4,7 @@
   "keywords": [
     "monad mainnet"
   ],
-  "timestamp": "2026-08-27T15:43:39.544442+00:00",
+  "timestamp": "2026-09-10T15:39:07.896799+00:00",
   "tokens": [
     {
       "chainId": 143,
@@ -1458,6 +1458,7 @@
       "symbol": "deJTRSY",
       "decimals": 18,
       "extensions": {
+        "coinGeckoId": "jtrsy-derwa",
         "crossChainAddresses": {
           "1": {
             "address": "0xA6233014B9b7aaa74f38fa1977ffC7A89642dC72"
@@ -1762,6 +1763,22 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/mHyperBTC/logo.svg"
+    },
+    {
+      "chainId": 143,
+      "address": "0x6CF55183eA297ba200Cf88419Bba156EBA2Ed206",
+      "name": "Midas Rockaway Market Neutral",
+      "symbol": "mROX",
+      "decimals": 18,
+      "extensions": {
+        "coinGeckoId": "midas-rockaway-market-neutral",
+        "crossChainAddresses": {
+          "1": {
+            "address": "0x67E1F506B148d0Fc95a4E3fFb49068ceB6855c05"
+          }
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/mROX/logo.svg"
     },
     {
       "chainId": 143,
@@ -2587,7 +2604,7 @@
   ],
   "version": {
     "major": 2,
-    "minor": 48,
+    "minor": 49,
     "patch": 0
   }
 }
